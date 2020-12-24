@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santa's Message</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa's Message</title>
 
-<body>
-  Hello World.
-  This is message from Santa!  
-</body>
+    <style>
+      body {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      img,
+      #player {
+        width: 100%;
+      }
+    </style>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          videoId: "WsItdkGuEQw",
+          playerVars: {
+            controls: 0,
+            autoplay: 1,
+            disablekb: 1,
+            enablejsapi: 1,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            showinfo: 0,
+          },
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Správa od Ježiška</h1>
+    <img src="img/watch.jpeg">
+    <div id="player"></div>
+    <img src="img/invoice.png">
+  </body>
 </html>
